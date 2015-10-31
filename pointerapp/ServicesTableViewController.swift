@@ -91,7 +91,7 @@ class ServicesTableViewController: UITableViewController {
         return true
     }
     */
-
+/*
     
     // MARK: - Navigation
 
@@ -101,7 +101,6 @@ class ServicesTableViewController: UITableViewController {
         if segue.identifier == "DetailSegue"
         {
            let detailViewControler = ((segue.destinationViewController) as! DetailServicesViewController)
-            let indexPath = self.servicesList.indexPathForSelectedRow!
             
             
             
@@ -112,7 +111,7 @@ class ServicesTableViewController: UITableViewController {
             //detailViewController.title = strImageName
         }
     }
-    
+ */
 
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
