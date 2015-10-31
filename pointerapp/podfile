@@ -1,0 +1,4 @@
+
+source            "https://github.com/one-signal/OneSignal-iOS-SDK.git"
+platform     = :ios, “8.1”
+pod “OneSignal”
