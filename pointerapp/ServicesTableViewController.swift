@@ -91,8 +91,8 @@ class ServicesTableViewController: UITableViewController {
         return true
     }
     */
-/*
-    
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -101,6 +101,9 @@ class ServicesTableViewController: UITableViewController {
         if segue.identifier == "DetailSegue"
         {
            let detailViewControler = ((segue.destinationViewController) as! DetailServicesViewController)
+            
+            let indexPath = tableView.indexPathForSelectedRow
+            
             
             
             
@@ -111,7 +114,7 @@ class ServicesTableViewController: UITableViewController {
             //detailViewController.title = strImageName
         }
     }
- */
+*/
 
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
