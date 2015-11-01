@@ -15,6 +15,7 @@ import MapKit
 
 class FindUsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
+    @IBOutlet weak var btnGetDirections: UIButton!
     
     @IBOutlet var mapView: MKMapView!
     
@@ -47,7 +48,12 @@ class FindUsViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         
         mapView.addAnnotation(annotation)
         
+        // make get directions  button rounded
         
+        btnGetDirections.layer.cornerRadius = 10
+        btnGetDirections.clipsToBounds = true
+        btnGetDirections.layer.borderColor = UIColor.whiteColor().CGColor
+        btnGetDirections.layer.borderWidth = 2
         
         
     }

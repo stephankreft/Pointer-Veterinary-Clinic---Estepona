@@ -10,7 +10,7 @@ import UIKit
 
 class ServicesTableViewController: UITableViewController {
     
-    var servicesList = ["Vaccination", "Microchips", " Surgery", "Diagnostic Imaging"," Dental", "Parasites", "Products", " Pet Travel"]
+    var servicesList = ["Vaccination", "Microchips", "Surgery", "Diagnostic Imaging"," Dental", "Parasites", "Products", "Pet Travel"]
     
 
     override func viewDidLoad() {

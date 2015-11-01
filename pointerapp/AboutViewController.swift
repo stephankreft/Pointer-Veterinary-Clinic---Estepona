@@ -10,6 +10,7 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    @IBOutlet weak var btnCallUs: UIButton!
     @IBAction func callButton(sender: AnyObject) {
         
         let phone = "tel://952804165";
@@ -23,6 +24,13 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        btnCallUs.layer.cornerRadius = 10
+        btnCallUs.clipsToBounds = true
+        btnCallUs.layer.borderColor = UIColor.whiteColor().CGColor
+        btnCallUs.layer.borderWidth = 2
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
