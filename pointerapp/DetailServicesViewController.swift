@@ -10,11 +10,23 @@ import UIKit
 
 class DetailServicesViewController: UIViewController {
 
+   
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var txtDesc: UITextView!
+    
+    var service:Services = Services()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        //lblName.text = store.storeName
+       // lblDesc.text = store.storeDesc
+        
+        lblName.text = service.servicesName
+        txtDesc.text = service.servicesDesc
+    
+   }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

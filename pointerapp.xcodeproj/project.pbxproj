@@ -22,6 +22,7 @@
 		88456BCC1BD12ECE00284762 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88456BC11BCFE06200284762 /* CoreLocation.framework */; };
 		88456BCE1BD137A800284762 /* OpeningHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		88456BD01BD1393100284762 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCF1BD1393100284762 /* AppointmentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8861BBB21BE8F9670053A89D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861BBB11BE8F9670053A89D /* Services.swift */; settings = {ASSET_TAGS = (); }; };
 		887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		88456BC91BD0FDFD00284762 /* FindUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindUsViewController.swift; sourceTree = "<group>"; };
 		88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningHoursViewController.swift; sourceTree = "<group>"; };
 		88456BCF1BD1393100284762 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		8861BBB11BE8F9670053A89D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailServicesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				88456B9C1BCFE04900284762 /* LaunchScreen.storyboard */,
 				88456B9F1BCFE04900284762 /* Info.plist */,
 				88292D4C1BDE587500C9CA16 /* ServicesTableViewController.swift */,
+				8861BBB11BE8F9670053A89D /* Services.swift */,
 				887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */,
 			);
 			path = pointerapp;
@@ -302,6 +305,7 @@
 				88292D4D1BDE587500C9CA16 /* ServicesTableViewController.swift in Sources */,
 				88456B961BCFE04900284762 /* ViewController.swift in Sources */,
 				88456B941BCFE04900284762 /* AppDelegate.swift in Sources */,
+				8861BBB21BE8F9670053A89D /* Services.swift in Sources */,
 				887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
