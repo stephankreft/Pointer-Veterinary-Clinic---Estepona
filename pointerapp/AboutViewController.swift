@@ -11,15 +11,7 @@ import UIKit
 class AboutViewController: UIViewController {
 
     @IBOutlet weak var btnCallUs: UIButton!
-    @IBAction func callButton(sender: AnyObject) {
-        
-        let phone = "tel://952804165";
-        
-        let url:NSURL = NSURL(string: phone)!
-        
-        UIApplication.sharedApplication().openURL(url)
-
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,8 +29,18 @@ class AboutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
     
+    
+    @IBAction func callUs(sender: AnyObject) {
+        
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://952804165")!)
+        
 
+    }
+    
+    
     /*
     // MARK: - Navigation
 
