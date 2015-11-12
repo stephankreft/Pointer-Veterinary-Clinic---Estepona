@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
+        
+    /* _ = OneSignal(launchOptions: launchOptions, appId: "524317d2-891a-11e5-b6bc-a0369f2d9328", handleNotification: nil)
+        
+        
+        OneSignal.defaultClient().enableInAppAlertNotification(true)
+
+*/
         return true
         
         // Override point for customization after application launch.
