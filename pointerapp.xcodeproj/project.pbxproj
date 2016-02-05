@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		88292D4D1BDE587500C9CA16 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88292D4C1BDE587500C9CA16 /* ServicesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		88292D4F1BDE591800C9CA16 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88292D4E1BDE591800C9CA16 /* logo.jpg */; settings = {ASSET_TAGS = (); }; };
-		88329AB41BDA620D008743A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88329AB31BDA620D008743A8 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		88292D4D1BDE587500C9CA16 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88292D4C1BDE587500C9CA16 /* ServicesTableViewController.swift */; };
+		88292D4F1BDE591800C9CA16 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88292D4E1BDE591800C9CA16 /* logo.jpg */; };
+		88329AB41BDA620D008743A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88329AB31BDA620D008743A8 /* Main.storyboard */; };
 		88456B941BCFE04900284762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456B931BCFE04900284762 /* AppDelegate.swift */; };
 		88456B961BCFE04900284762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456B951BCFE04900284762 /* ViewController.swift */; };
 		88456B9B1BCFE04900284762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88456B9A1BCFE04900284762 /* Assets.xcassets */; };
@@ -17,13 +17,13 @@
 		88456BA91BCFE04900284762 /* pointerappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BA81BCFE04900284762 /* pointerappTests.swift */; };
 		88456BB41BCFE04900284762 /* pointerappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BB31BCFE04900284762 /* pointerappUITests.swift */; };
 		88456BC41BCFE06E00284762 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88456BC31BCFE06E00284762 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		88456BC81BD0E96500284762 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BC71BD0E96500284762 /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		88456BCA1BD0FDFD00284762 /* FindUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BC91BD0FDFD00284762 /* FindUsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		88456BCC1BD12ECE00284762 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88456BC11BCFE06200284762 /* CoreLocation.framework */; };
-		88456BCE1BD137A800284762 /* OpeningHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		88456BD01BD1393100284762 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCF1BD1393100284762 /* AppointmentViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8861BBB21BE8F9670053A89D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861BBB11BE8F9670053A89D /* Services.swift */; settings = {ASSET_TAGS = (); }; };
-		887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		88456BCE1BD137A800284762 /* OpeningHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */; };
+		88456BD01BD1393100284762 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456BCF1BD1393100284762 /* AppointmentViewController.swift */; };
+		8861BBB21BE8F9670053A89D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861BBB11BE8F9670053A89D /* Services.swift */; };
+		887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */; };
+		889F57191BF5D9310063BE3C /* FindUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F57181BF5D9310063BE3C /* FindUsViewController.swift */; };
+		88E68C4C1C64CEDB009033F1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E68C4B1C64CEDB009033F1 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +61,12 @@
 		88456BB51BCFE04900284762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88456BC11BCFE06200284762 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		88456BC31BCFE06E00284762 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		88456BC71BD0E96500284762 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		88456BC91BD0FDFD00284762 /* FindUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindUsViewController.swift; sourceTree = "<group>"; };
 		88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningHoursViewController.swift; sourceTree = "<group>"; };
 		88456BCF1BD1393100284762 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		8861BBB11BE8F9670053A89D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		887058E71BDE7E0600D913D0 /* DetailServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailServicesViewController.swift; sourceTree = "<group>"; };
+		889F57181BF5D9310063BE3C /* FindUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindUsViewController.swift; sourceTree = "<group>"; };
+		88E68C4B1C64CEDB009033F1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				88456B931BCFE04900284762 /* AppDelegate.swift */,
-				88456BC71BD0E96500284762 /* AboutViewController.swift */,
 				88329AB31BDA620D008743A8 /* Main.storyboard */,
 				88456B951BCFE04900284762 /* ViewController.swift */,
+				889F57181BF5D9310063BE3C /* FindUsViewController.swift */,
+				88E68C4B1C64CEDB009033F1 /* AboutViewController.swift */,
 				88292D4E1BDE591800C9CA16 /* logo.jpg */,
-				88456BC91BD0FDFD00284762 /* FindUsViewController.swift */,
 				88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */,
 				88456BCF1BD1393100284762 /* AppointmentViewController.swift */,
 				88456B9A1BCFE04900284762 /* Assets.xcassets */,
@@ -299,14 +299,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88456BD01BD1393100284762 /* AppointmentViewController.swift in Sources */,
-				88456BC81BD0E96500284762 /* AboutViewController.swift in Sources */,
-				88456BCA1BD0FDFD00284762 /* FindUsViewController.swift in Sources */,
 				88456BCE1BD137A800284762 /* OpeningHoursViewController.swift in Sources */,
 				88292D4D1BDE587500C9CA16 /* ServicesTableViewController.swift in Sources */,
+				88E68C4C1C64CEDB009033F1 /* AboutViewController.swift in Sources */,
 				88456B961BCFE04900284762 /* ViewController.swift in Sources */,
 				88456B941BCFE04900284762 /* AppDelegate.swift in Sources */,
 				8861BBB21BE8F9670053A89D /* Services.swift in Sources */,
 				887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */,
+				889F57191BF5D9310063BE3C /* FindUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

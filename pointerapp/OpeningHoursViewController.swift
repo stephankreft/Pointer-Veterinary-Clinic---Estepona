@@ -10,9 +10,28 @@ import UIKit
 
 class OpeningHoursViewController: UIViewController {
 
+    @IBOutlet weak var btnCallEmergency: UIButton!
+    @IBOutlet weak var btnToAppointment: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnCallEmergency.layer.cornerRadius = 10
+        btnCallEmergency.clipsToBounds = true
+        btnCallEmergency.layer.borderColor = UIColor.blackColor().CGColor
+        btnCallEmergency.layer.borderWidth = 2
+        
+        
+        btnToAppointment.layer.cornerRadius = 10
+        btnToAppointment.clipsToBounds = true
+        btnToAppointment.layer.borderColor = UIColor.blackColor().CGColor
+        btnToAppointment.layer.borderWidth = 2
+        
 
+        
+
+    
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +40,12 @@ class OpeningHoursViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func callEmergency(sender: AnyObject) {
+         UIApplication.sharedApplication().openURL(NSURL(string: "tel://689069502")!)
+    }
+   
+    
+    
     /*
     // MARK: - Navigation
 
