@@ -9,191 +9,117 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Contacts
 
 
 
 
-class FindUsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
-    
-    @IBOutlet weak var btnGetDirections: UIButton!
-    
-    @IBOutlet var mapView: MKMapView!
-    
-    var locationManager = CLLocationManager()
-    var myPosition = CLLocationCoordinate2D()
-    
-    // creae a variable destination for directions
-    
-    var destination:MKMapItem = MKMapItem()
+class FindUsViewController: UIViewController, UITableViewDataSource,MKMapViewDelegate {
+   
+    @IBOutlet weak var mapView: MKMapView!
     
     
+    @IBOutlet weak var tableView: UITableView!
     
+   
+    
+    
+    var destinations:[Destination]
+    
+    var userAnnotation:MKPointAnnotation?
+    var userCoordinate:CLLocationCoordinate2D?
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        let Pointer = Destination(withName: "Pointer Clinic Estepona", latitude: 36.443467, longitude: -5.098944,
+            address: [
+                CNPostalAddressStreetKey:"Pointer Veterinary Clinic - Estepona",
+                CNPostalAddressCityKey:"Estepona",
+                CNPostalAddressPostalCodeKey:"29680",
+                CNPostalAddressCountryKey:"Spain"])
+        
+        destinations = [Pointer]
+        
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
         
-        let locCoord = CLLocationCoordinate2D(latitude: 36.442279, longitude: -5.100038)
-        
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = locCoord
-        annotation.title = "Pointer Veterinary Clinic "
-        annotation.subtitle = "Estepona"
-        
-        mapView.addAnnotation(annotation)
-        
-        // make get directions  button rounded
-        
-        btnGetDirections.layer.cornerRadius = 10
-        btnGetDirections.clipsToBounds = true
-        btnGetDirections.layer.borderColor = UIColor.whiteColor().CGColor
-        btnGetDirections.layer.borderWidth = 2
         
         
+        
+       mapView.delegate = self
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: "handleTap:")
+        mapView.addGestureRecognizer(tap)
+        
+        mapView.region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: CLLocationDegrees(36.4435068),
+                longitude: CLLocationDegrees(-5.1098817)),
+            span: MKCoordinateSpan(
+                latitudeDelta: CLLocationDegrees(0.05),
+                longitudeDelta: CLLocationDegrees(0.05)))
+        
+        for destination in destinations {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = destination.coordinate
+            mapView.addAnnotation(annotation)
+        }
     }
     
-    
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    func handleTap(gestureRecognizer:UITapGestureRecognizer) {
+        let point = gestureRecognizer.locationInView(mapView)
         
+        userCoordinate = mapView.convertPoint(point, toCoordinateFromView:mapView)
         
-        print("Got Location \(newLocation.coordinate.latitude) , \(newLocation.coordinate.longitude) ")
-        
-        myPosition = newLocation.coordinate
-        
-        locationManager.stopUpdatingLocation()
-        
-        
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: newLocation.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
-        
-        
-        
-        
-    }
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    @IBAction func addPin(sender: UILongPressGestureRecognizer) {
-        
-        
-        let location = sender.locationInView(self.mapView)
-        
-        let locCoord = self.mapView.convertPoint(location, toCoordinateFromView: self.mapView)
-        
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = locCoord
-        annotation.title = "Pointer Veterinary Clinic"
-        annotation.subtitle = "Estepona"
-        
-        
-        
-        // create a place mark and a map item
-        
-        let placeMark = MKPlacemark(coordinate: locCoord, addressDictionary: nil)
-        
-        
-        // This is needed when we need to get direction
-        
-        destination = MKMapItem(placemark: placeMark)
-        
-        
-        
-        
-        self.mapView.removeAnnotations(mapView.annotations)
-        
-        self.mapView.addAnnotation(annotation)
-        
-    }
-    
-    
-    @IBAction func showDirections(sender: AnyObject) {
-        
-        
-        // Need to create a MKDiirection Request
-        
-        let request = MKDirectionsRequest()
-        request.source = MKMapItem.mapItemForCurrentLocation()
-        
-        
-        request.destination = destination
-        request.requestsAlternateRoutes = false
-        
-        let directions = MKDirections(request: request)
-        
-        
-        directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
-            
-            if error != nil {
-                
-                print("Error \(error)")
-                
-                
-            } else {
-                
-                
-                //self.dispLayRout(response)
-                
-                let overlays = self.mapView.overlays
-                self.mapView.removeOverlays(overlays)
-                
-                for route in response!.routes {
-                    
-                    self.mapView.addOverlay(route.polyline,
-                        level: MKOverlayLevel.AboveRoads)
-                    
-                    for next  in route.steps {
-                        print(next.instructions)
-                    }
-                }
-                
-                
-            }
-            
+        if userAnnotation != nil {
+            mapView.removeAnnotation(userAnnotation!)
         }
         
+        userAnnotation = MKPointAnnotation()
+        userAnnotation!.coordinate = userCoordinate!
+        mapView.addAnnotation(userAnnotation!)
         
-        
+        for cell in self.tableView.visibleCells as! [DestinationTableViewCell] {
+            cell.userCoordinate = userCoordinate
+        }
+    }
+}
+
+// UITableView Datasource
+extension FindUsViewController {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return destinations.count
     }
     
-    
-    // This one draws the rout on the map using map overlays
-    // you need to make sure that the deleget for the mapview in the storyboard
-    // is set to this class
-    
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer
-    {
-        let draw = MKPolylineRenderer(overlay: overlay)
-        draw.strokeColor = UIColor.purpleColor()
-        draw.lineWidth = 3.0
-        return draw
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("destinationCell") as! DestinationTableViewCell
+        cell.destination = destinations[indexPath.row]
+        cell.userCoordinate = userCoordinate
+        return cell
     }
     
+}
+
+
+
+// MKMapViewDelegate
+extension FindUsViewController {
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        pin.pinTintColor = annotation === userAnnotation ? UIColor.redColor() : UIColor.blueColor()
+        return pin
     }
-    */
-    
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
         super.viewWillAppear(animated)
     }
 }
+
+

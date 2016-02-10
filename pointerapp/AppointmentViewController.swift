@@ -125,7 +125,7 @@ class AppointmentViewController: UIViewController,NSURLConnectionDelegate{
         
         
         
-        self.displayAlertMessage("Thank for contacting us. We will contact you shortly")
+        self.displayAlertMessage("Thank you for contacting us. We will contact you shortly")
         
        
         

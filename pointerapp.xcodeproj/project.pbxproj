@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880AB5D41C69DDCE00A258DE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB5D31C69DDCE00A258DE /* Destination.swift */; };
+		880AB5D61C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB5D51C69EDF100A258DE /* DestinationTableViewCell.swift */; };
+		880AB5D71C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB5D51C69EDF100A258DE /* DestinationTableViewCell.swift */; };
+		880AB5D81C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB5D51C69EDF100A258DE /* DestinationTableViewCell.swift */; };
 		88292D4D1BDE587500C9CA16 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88292D4C1BDE587500C9CA16 /* ServicesTableViewController.swift */; };
 		88292D4F1BDE591800C9CA16 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88292D4E1BDE591800C9CA16 /* logo.jpg */; };
 		88329AB41BDA620D008743A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88329AB31BDA620D008743A8 /* Main.storyboard */; };
@@ -44,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		880AB5D31C69DDCE00A258DE /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		880AB5D51C69EDF100A258DE /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
 		88292D4C1BDE587500C9CA16 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		88292D4E1BDE591800C9CA16 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		88329AB31BDA620D008743A8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				88456B951BCFE04900284762 /* ViewController.swift */,
 				889F57181BF5D9310063BE3C /* FindUsViewController.swift */,
 				88E68C4B1C64CEDB009033F1 /* AboutViewController.swift */,
+				880AB5D51C69EDF100A258DE /* DestinationTableViewCell.swift */,
+				880AB5D31C69DDCE00A258DE /* Destination.swift */,
 				88292D4E1BDE591800C9CA16 /* logo.jpg */,
 				88456BCD1BD137A800284762 /* OpeningHoursViewController.swift */,
 				88456BCF1BD1393100284762 /* AppointmentViewController.swift */,
@@ -307,6 +315,8 @@
 				8861BBB21BE8F9670053A89D /* Services.swift in Sources */,
 				887058E81BDE7E0600D913D0 /* DetailServicesViewController.swift in Sources */,
 				889F57191BF5D9310063BE3C /* FindUsViewController.swift in Sources */,
+				880AB5D41C69DDCE00A258DE /* Destination.swift in Sources */,
+				880AB5D61C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880AB5D71C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */,
 				88456BA91BCFE04900284762 /* pointerappTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880AB5D81C69EDF100A258DE /* DestinationTableViewCell.swift in Sources */,
 				88456BB41BCFE04900284762 /* pointerappUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +456,7 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = pointerapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "-682BJKGZ7.com.pointerclinic.pointerapp";
@@ -464,7 +476,7 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = pointerapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "-682BJKGZ7.com.pointerclinic.pointerapp";
