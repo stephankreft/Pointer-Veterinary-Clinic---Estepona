@@ -376,6 +376,7 @@ We look forward to welcoming you to the Pointer Veterinary Clinic in Estepona.
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="CallUs:" destination="mv7-ek-HU2" eventType="touchUpInside" id="V58-sp-xfR"/>
                                                     <action selector="callUs:" destination="mv7-ek-HU2" eventType="touchUpInside" id="6RT-jD-TKq"/>
                                                 </connections>
                                             </button>
@@ -433,8 +434,8 @@ We look forward to welcoming you to the Pointer Veterinary Clinic in Estepona.
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1200"/>
                     <connections>
-                        <outlet property="btnAppointment" destination="12b-PL-zG1" id="65D-ga-JKH"/>
-                        <outlet property="btnCall" destination="uiQ-1E-CbQ" id="cDW-eh-dm5"/>
+                        <outlet property="btnAppointment" destination="12b-PL-zG1" id="oQV-vI-bMG"/>
+                        <outlet property="btnCall" destination="uiQ-1E-CbQ" id="d0j-tX-JUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9K-4t-0hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1143,7 +1144,7 @@ We look forward to welcoming you to the Pointer Veterinary Clinic in Estepona.
         <image name="pet32" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hs8-gt-paH"/>
+        <segue reference="yYV-n3-MlT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
